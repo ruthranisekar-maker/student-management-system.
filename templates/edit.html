@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+<style>
+   body {
+background-color: aquamarine;
+color: black;
+text-align: center;
+font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+    }
+    h2{
+        color:navy
+    }
+    button{
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        
+        
+    }
+    form{
+    font-size: 20px;
+    }
+        </style>
+</head>
+<body >
+    <h2>Edit Student</h2>
+
+    <form method="POST">
+        Name: <input type="text" name="name" value="{{ student[1] }}" required><br><br>
+        Email :<input type="email" name="email" value="{{ student[2] }}" required><br><br>
+        Course :<input type="text" name="course" value="{{ student[3] }}" required><br><br>
+    <button type="submit">change</button>
+    </form>
+</body>
+</html>

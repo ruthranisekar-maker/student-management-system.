@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="design">
+    <h2>Student List</h2>
+
+    <a href="/add">Add Student</a>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Created_at</th>
+
+            <th colspan="2">Actions</th>
+        </tr>
+
+        {% for s in datas %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+            <td>{{ s[4] }}</td>
+            <td>
+                <a href="/edit/{{ s[0] }}">Edit</a></td>
+              <td>  <a href="/delete/{{ s[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/" style="color:black">Back</a>
+    </div>
+</body>
+</html>
